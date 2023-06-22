@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %}
+Cadastro de Fornecedores
+{% endblock title %}
+
+{% block content %}
+
+<form method="post">
+        {% csrf_token %}
+    {{ form|bootstrap }}
+    <button type="submit" class="btn btn-primary">
+        Salvar
+    </button>
+    </button>
+    <a href="{% url 'listar_marca' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+</form>
+
+{% endblock content %}
